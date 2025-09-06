@@ -18,6 +18,6 @@ pickup_button.pack()
 dropoff_button.pack()
 
 # sample for test
-open_button = tk.Button(root, text="Open", height=5, width=20, command=pickup_button)
+open_button = tk.Button(root, text="Open", height=5, width=20, command=open_door)
 open_button.pack()
 root.mainloop()
