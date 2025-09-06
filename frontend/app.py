@@ -12,7 +12,7 @@ root = tk.Tk()
 root.title("Birdie Fix")
 root.geometry("1920x1080")
 
-pickup_button = tk.Button(root, text="Open", width=25, command=pickup_handler)
+pickup_button = tk.Button(root, text="Pick Up", width=25, command=pickup_handler)
 dropoff_button = tk.Button(root, text="Drop Off", width=25, command=dropoff_handler)
 pickup_button.pack()
 dropoff_button.pack()
