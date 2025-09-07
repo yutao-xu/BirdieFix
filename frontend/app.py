@@ -47,8 +47,11 @@ class ChooseTension(tk.Frame):
         label = ttk.Label(self, text="Choose a Tension")
         label.grid(row=0, column=4, padx=10, pady=10)
 
+        entry = ttk.Entry(self)
+        entry.grid(row=1, column=4, padx=10, pady=10)
+        
         back_button = ttk.Button(self, text="Back", command=lambda: controller.show_frame(Homepage))
-        back_button.grid(row=1, column=4, padx=10, pady=10)
+        back_button.grid(row=2, column=4, padx=10, pady=10)
 
         next_button = ttk.Button(self, text="Next", command=lambda: controller.show_frame(ChooseString))
         next_button.grid(row=2, column=4, padx=10, pady=10)
