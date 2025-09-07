@@ -145,8 +145,12 @@ class Checkout(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
 
+        # test buttons
         open_button = ttk.Button(self, text="Open Door", command=open_door)
-        open_button.grid(row=4, column=8, padx=10, pady=10)
+        open_button.grid(row=0, column=4, padx=10, pady=10)
+
+        back_button = ttk.Button(self, text="Start Over", command=lambda: controller.show_frame(Homepage))
+        back_button.grid(row=1, column=4, padx=10, pady=10)
 
 app = App()
 app.mainloop()
