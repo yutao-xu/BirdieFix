@@ -47,14 +47,18 @@ class ChooseTension(tk.Frame):
         label = ttk.Label(self, text="Choose a Tension")
         label.grid(row=0, column=4, padx=10, pady=10)
 
-        entry = ttk.Entry(self)
-        entry.grid(row=1, column=4, padx=10, pady=10)
+        tensions = []
+        for i in range(19, 30):
+            tensions.append(i + 1)
         
+        tension = ttk.Combobox(self, values=tensions)
+        tension.grid(row=1, column=4, padx=10, pady=10)
+
         back_button = ttk.Button(self, text="Back", command=lambda: controller.show_frame(Homepage))
         back_button.grid(row=2, column=4, padx=10, pady=10)
 
         next_button = ttk.Button(self, text="Next", command=lambda: controller.show_frame(ChooseString))
-        next_button.grid(row=2, column=4, padx=10, pady=10)
+        next_button.grid(row=2, column=8, padx=10, pady=10)
 
 class ChooseString(tk.Frame):
     def __init__(self, parent, controller):
@@ -63,11 +67,16 @@ class ChooseString(tk.Frame):
         label = ttk.Label(self, text="Choose a String")
         label.grid(row=0, column=4, padx=10, pady=10)
 
+        strings = ["BG 80", "BG 90", "BG 100", "BG 110", "BG 120"]
+
+        string = ttk.Combobox(self, values=strings)
+        string.grid(row=1, column=4, padx=10, pady=10)
+
         back_button = ttk.Button(self, text="Back", command=lambda: controller.show_frame(ChooseTension))
-        back_button.grid(row=1, column=4, padx=10, pady=10)
+        back_button.grid(row=2, column=4, padx=10, pady=10)
 
         next_button = ttk.Button(self, text="Next", command=lambda: controller.show_frame(EnterNumber))
-        next_button.grid(row=2, column=4, padx=10, pady=10)
+        next_button.grid(row=2, column=8, padx=10, pady=10)
 
 class EnterNumber(tk.Frame):
     def __init__(self, parent, controller):
@@ -76,11 +85,14 @@ class EnterNumber(tk.Frame):
         label = ttk.Label(self, text="Enter Your Phone Number")
         label.grid(row=0, column=4, padx=10, pady=10)
 
+        phone_number = ttk.Entry(self)
+        phone_number.grid(row=1, column=4, padx=10, pady=10)
+
         back_button = ttk.Button(self, text="Back", command=lambda: controller.show_frame(ChooseString))
-        back_button.grid(row=1, column=4, padx=10, pady=10)
+        back_button.grid(row=2, column=4, padx=10, pady=10)
 
         open_button = ttk.Button(self, text="Open Door", command=open_door)
-        open_button.grid(row=2, column=4, padx=10, pady=10)
+        open_button.grid(row=2, column=8, padx=10, pady=10)
 
 app = App()
 app.mainloop()
