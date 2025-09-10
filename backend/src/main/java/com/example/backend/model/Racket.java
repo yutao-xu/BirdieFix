@@ -14,6 +14,9 @@ public class Racket {
     private int tension;
     private String racketString;
     private String phoneNumber;
+    private int lockerNumber;
+    private int pickupCode;
+    private String status;
 
     protected Racket() {}
 
@@ -21,6 +24,9 @@ public class Racket {
         this.tension = tension;
         this.racketString = racketString;
         this.phoneNumber = phoneNumber;
+        this.lockerNumber = -1;
+        this.pickupCode = -1;
+        this.status = "dropped_off";
     }
 
     public Long getId() {
@@ -37,5 +43,29 @@ public class Racket {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public int getLockerNumber() {
+        return lockerNumber;
+    }
+
+    public int getPickupCode() {
+        return pickupCode;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setLockerNumber(int lockerNumber) {
+        this.lockerNumber = lockerNumber;
+    }
+
+    public void setPickupCode(int pickupCode) {
+        this.pickupCode = pickupCode;
+    }
+
+    public void setStatus (String status) {
+        this.status = status;
     }
 }
