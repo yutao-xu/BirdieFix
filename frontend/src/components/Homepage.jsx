@@ -7,8 +7,8 @@ const Homepage = () => {
     return (
         <>
             <h1>Birdie Fix</h1>
-            <button onClick={() => navigate("/pickup")}>Pickup</button>
-            <button onClick={() => navigate("/racketstring")}>Dropoff</button>
+            <button class="homepage" onClick={() => navigate("/pickup")}>Pickup</button>{' '}
+            <button class="homepage" onClick={() => navigate("/racketstring")}>Dropoff</button>
         </>
     )
 }
