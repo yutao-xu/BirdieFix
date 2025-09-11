@@ -2,13 +2,12 @@ package com.example.backend.controller;
 
 import com.example.backend.model.RacketDTO;
 import com.example.backend.service.RacketService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("api/rackets")
 public class RacketController {
 
