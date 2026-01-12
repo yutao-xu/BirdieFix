@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("api/rackets")
+@RequestMapping("rackets")
 public class RacketController {
 
     private final RacketService racketService;
